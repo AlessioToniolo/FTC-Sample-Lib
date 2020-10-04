@@ -144,18 +144,26 @@ public class Auto_Red_Build_Wall_16633_State extends LinearOpMode {
             double reverseTurn = newAngles - angleTurnInDegrees;
             if (whichTurn == 'r') {
                 left(reverseTurn);
+                telemetry.addData("> ", "Heading correction underway");
+                telemetry.update();
             }
             else {
                 right(reverseTurn);
+                telemetry.addData("> ", "Heading correction underway");
+                telemetry.update();
             }
         }
         else {
             double inverseTurn = angleTurnInDegrees - newAngles;
             if (whichTurn == 'r') {
                 right(inverseTurn);
+                telemetry.addData("> ", "Heading correction underway");
+                telemetry.update();
             }
             else {
                 left(inverseTurn);
+                telemetry.addData("> ", "Heading correction underway");
+                telemetry.update();
             }
         }
 
